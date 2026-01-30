@@ -1,0 +1,43 @@
+{
+  "name": "snapchat_memories",
+  "version": "1.0.0",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "node server.js",
+    "electron": "electron .",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1",
+    "fs-extra": "^11.3.3",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "electron": "^34.5.8",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.offline.snapchat.memories",
+    "productName": "Snapchat Offline Memories",
+    "files": [
+      "electron-main.js",
+      "server.js",
+      "public/**",
+      "memories/**",
+      "favorites.json",
+      "package.json"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

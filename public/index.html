@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snapchat Memories Offline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="title-block">
+      <h1>Snapchat Offline Memories</h1>
+      <p class="subtitle">Your private archive – <a href="#">placeholder link</a></p>
+    </div>
+    <div class="top-actions">
+      <button id="import-btn" class="import-btn">Import</button>
+      <input
+        id="import-input"
+        type="file"
+        webkitdirectory
+        multiple
+        hidden
+      />
+      <div class="tabs">
+        <button class="tab-button active" data-tab="all">All</button>
+        <button class="tab-button" data-tab="favorites">Favorites</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">☾</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="memories-container" class="memories-grid"></section>
+    <div id="loading-indicator" class="loading">Loading…</div>
+  </main>
+
+  <div id="viewer-modal" class="modal hidden">
+    <div class="modal-inner">
+      <button class="close-btn" id="close-modal">×</button>
+      <div id="viewer-media" class="viewer-media">
+        <button id="viewer-prev" class="viewer-nav viewer-nav-left" aria-label="Previous">
+          ‹
+        </button>
+        <div id="viewer-media-inner" class="viewer-media-inner"></div>
+        <button id="viewer-next" class="viewer-nav viewer-nav-right" aria-label="Next">
+          ›
+        </button>
+      </div>
+      <div class="viewer-actions">
+        <button id="favorite-btn" class="action-btn">★ Favorite</button>
+        <button id="share-btn" class="action-btn">Share</button>
+        <button id="delete-btn" class="action-btn danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
